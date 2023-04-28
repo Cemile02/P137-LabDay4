@@ -9,15 +9,15 @@ namespace StringMethods
 		public string[] SplitArray(string str, char character = ' ')
 		{
 			string[] myarr = new string[str.Length + 1];
-
 			int arrayCount = 0;
 			StringBuilder word = new StringBuilder();
-			for (int i = 0; i < str.Length; i++)
+			for (int i = 0; i < str.Length; i++)//Alma.
 			{
 				if (str[i] != character)
 				{
 					word.Append(str[i]);
-					if (i == str.Length - 1)
+
+					if (i ==  str.Length - 1)
 					{
 						myarr[arrayCount] = word.ToString();
 						arrayCount++;
@@ -25,8 +25,8 @@ namespace StringMethods
 					continue;
 				}
 
-				myarr[arrayCount] = word.ToString();
-				word = new StringBuilder();
+				myarr[arrayCount] = word.ToString();//Alma
+				word = new StringBuilder();// "ARMUD   "
 				arrayCount++;
 			}
 			Array.Resize(ref myarr, arrayCount);
